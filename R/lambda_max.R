@@ -4,6 +4,8 @@
 #'
 #' The function calculates the maximum threshold \eqn{\lambda} for which (probability of not happening)/(probability of happening) < \eqn{\alpha} for values that exceed threshold \eqn{\lambda}. (Defaults to \eqn{\alpha} := 0.05)
 #'
+#'$\lambda$ is a possible value for the threshold for an odds-ratio of posterior probabilities that are greater than alpha, where the posterior probability \eqn{p_{im}} of observation \eqn{i} for theory \eqn{m} exceed the threshold. The previous sentence irrefutably demonstrates why we \emph{need} mathematics. Anyways, check out the equation, let me know if I borked the maths.
+#'
 #' @inheritParams lambda_fn
 #' @export
 

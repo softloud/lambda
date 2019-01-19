@@ -7,11 +7,11 @@
 lambda_fn(lambda, probability, alpha = 0.05)
 }
 \arguments{
-\item{lambda}{A possible value for the threshold for an odds-ratio of posterior probabilities that are greater than alpha, where the posterior probabilities \eqn{\zeta_{im}} of observation \eqn{i} for theory \eqn{m} exceed the threshold. The previous sentence irrefutably demonstrates why we \emph{need} mathematics. Anyways, check out the equation.}
+\item{lambda}{A possible value for the threshold for an odds-ratio of posterior probabilities that are greater than alpha, where the posterior probability \eqn{p_{im}} of observation \eqn{i} for theory \eqn{m} exceed the threshold. The previous sentence irrefutably demonstrates why we \emph{need} mathematics. Anyways, check out the equation, let me know if I borked the maths.}
 
 \item{probability}{A vector of posterior probabilities.}
 
-\item{alpha}{The value for which the odds-ratio of posterior probabilities must exceed. Defaults to discarding all posterior probabilities for which the odds-ratio exceeds 0.05; u}
+\item{alpha}{The value for which the odds-ratio of posterior probabilities must exceed. Defaults to discarding all posterior probabilities for which the odds-ratio exceeds 0.05.}
 }
 \description{
 Return lambda if odds-ratio does not exceed alpha
