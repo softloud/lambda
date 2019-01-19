@@ -1,19 +1,23 @@
-#' Calculate infinum of lambda
+#' Return lambda if odds-ratio does not exceed alpha
 #'
-#' @param df A dataframe with prob, theory, and participant.
-#' @param threshold
+#' @param lambda A possible value for the threshold for an odds-ratio of posterior probabilities that are greater than alpha, where the posterior probabilities \eqn{\zeta_{im}} of observation \eqn{i} for theory \eqn{m} exceed the threshold. The previous sentence irrefutably demonstrates why we \emph{need} mathematics. Anyways, check out the equation.
+#' @param probability A vector of posterior probabilities.
+#' @param alpha The value for which the odds-ratio of posterior probabilities must exceed. Defaults to discarding all posterior probabilities for which the odds-ratio exceeds 0.05; u
 #'
-#' @export
+#'
 
-lambda_fn <- function(lambda, prob, alpha = 0.05) {
-  prod_term <- if (sum(prob < lambda) != 0)
+lambda_fn <- function(lambda, probability, alpha = 0.05) {
+  # divide by 1 if no probability values exceed lambda
+  prod_term <- if (sum(probability < lambda) != 0)
     1
   else
     0
 
-  quotient <-   sum((1 - prob) * (prob >= lambda)) /
-    (sum(prob >= lambda) + prod_term)
+  # calculate odds ratio
+  quotient <-   sum((1 - probability) * (probability >= lambda)) /
+    (sum(probability >= lambda) + prod_term)
 
+  # only return lambda value if the quotient is <= alpha
   if (quotient <= alpha)
     return(lambda)
   else
