@@ -21,6 +21,6 @@ lambda_fn <- function(lambda, probability, alpha = 0.05) {
   if (quotient <= alpha)
     return(lambda)
   else
-    return(0)
+    return(0.8 + lambda)
 
 }
