@@ -38,17 +38,17 @@ library(lambda)
 set.seed(38)
 
 # grab `probability data` between 0 and 1
-some_data <- rnorm(100)
+some_data <- runif(100)
 
 some_data %>% skim()
 #> 
 #> Skim summary statistics
 #> 
 #> ── Variable type:numeric ───────────────────────────────────────────────────────────────────────────
-#>  variable missing complete   n  mean   sd    p0   p25    p50  p75 p100
-#>         .       0      100 100 0.015 0.93 -2.06 -0.43 -0.013 0.58 2.35
+#>  variable missing complete   n mean   sd    p0  p25  p50  p75 p100
+#>         .       0      100 100  0.5 0.29 0.015 0.29 0.51 0.75 0.99
 #>      hist
-#>  ▁▂▂▇▃▃▁▁
+#>  ▇▂▅▅▆▅▇▅
 
 ## lambda_inf finds the infinum of the lambda function
 

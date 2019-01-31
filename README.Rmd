@@ -41,7 +41,7 @@ library(lambda)
 set.seed(38)
 
 # grab `probability data` between 0 and 1
-some_data <- rnorm(100)
+some_data <- runif(100)
 
 some_data %>% skim()
 
