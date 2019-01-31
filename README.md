@@ -83,7 +83,7 @@ tibble(
                 label = c(paste0("optimise: ",  round(lambda_optimise(some_data), 4)), 
                            paste0("empirical: ", lambda_inf(some_data)))), 
             aes(x = x, y = y, label = label),
-            nudge_x = 0.1) +
+            nudge_x = c(0.1, -0.1)) +
   labs(title = paste0("lambda threshold: ", lambda_inf(some_data)))
 ```
 
