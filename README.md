@@ -23,14 +23,19 @@ This is a basic example which shows you how to solve a common problem:
 
 # packages
 library(skimr)
+#> 
+#> Attaching package: 'skimr'
+#> The following object is masked from 'package:stats':
+#> 
+#>     filter
 library(tidyverse)
-#> ── Attaching packages ─────────────────────────────────────────────────────────── tidyverse 1.2.1 ──
-#> ✔ ggplot2 3.0.0     ✔ purrr   0.3.0
-#> ✔ tibble  1.4.2     ✔ dplyr   0.7.6
-#> ✔ tidyr   0.8.1     ✔ stringr 1.3.1
-#> ✔ readr   1.1.1     ✔ forcats 0.3.0
-#> ── Conflicts ────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
-#> ✖ dplyr::filter() masks stats::filter()
+#> ── Attaching packages ──────────────────────────────────────────────────── tidyverse 1.2.1 ──
+#> ✔ ggplot2 3.2.1     ✔ purrr   0.3.2
+#> ✔ tibble  2.1.3     ✔ dplyr   0.8.3
+#> ✔ tidyr   0.8.3     ✔ stringr 1.4.0
+#> ✔ readr   1.3.1     ✔ forcats 0.4.0
+#> ── Conflicts ─────────────────────────────────────────────────────── tidyverse_conflicts() ──
+#> ✖ dplyr::filter() masks skimr::filter(), stats::filter()
 #> ✖ dplyr::lag()    masks stats::lag()
 library(lambda)
 
@@ -44,7 +49,7 @@ some_data %>% skim()
 #> 
 #> Skim summary statistics
 #> 
-#> ── Variable type:numeric ───────────────────────────────────────────────────────────────────────────
+#> ── Variable type:numeric ────────────────────────────────────────────────────────────────────
 #>  variable missing complete   n mean   sd    p0  p25  p50  p75 p100
 #>         .       0      100 100  0.5 0.29 0.015 0.29 0.51 0.75 0.99
 #>      hist

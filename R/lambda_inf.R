@@ -22,7 +22,7 @@ lambda_inf <- function(probability, alpha = 0.5, precision = 0.001) {
 
   tibble(
     lambda = seq(0, 1, by = 0.001),
-    lambda_fn = map_dbl(lambda, lambda:::lambda_fn, probability = some_data)
+    lambda_fn = map_dbl(lambda, lambda:::lambda_fn, probability)
   ) %>% pluck("lambda_fn") %>% min()
 
   }
