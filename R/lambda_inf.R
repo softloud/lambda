@@ -10,7 +10,7 @@
 #' for values that exceed threshold \eqn{\lambda}.
 #' (Defaults to \eqn{\alpha} := 0.05)
 #'
-#'\eqn{\lambda} is a possible value for the threshold for an odds-ratio of
+#' \eqn{\lambda} is a possible value for the threshold for an odds-ratio of
 #' posterior probabilities that are greater than alpha, where the posterior
 #' probability \eqn{p_{im}} of observation \eqn{i} for theory \eqn{m} exceed the
 #' threshold. The previous sentence irrefutably demonstrates why we \emph{need}
@@ -18,7 +18,7 @@
 #' maths.
 #'
 #' @inheritParams lambda_fn
-#' @inheritParams precision what level of precision is required
+#' @param precision what level of precision is required
 #' @export
 
 lambda_inf <- function(probability, alpha = 0.5, precision = 0.001) {
